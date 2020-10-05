@@ -1,35 +1,8 @@
- ##example
-makeVector <- function(x = matrix()) {
-        m <- NULL
-        set <- function(y) {
-                x <<- y
-                m <<- NULL
-        }
-        get <- function() x
-        setmean <- function(mean) m <<- mean
-        getmean <- function() m
-        list(set = set, get = get,
-             setmean = setmean,
-             getmean = getmean)
-}
+##..........................homework
 
-cachemean <- function(x, ...) {
-        m <- x$getmean()
-        if(!is.null(m)) {
-                message("getting cached data")
-                return(m)
-        }
-        data <- x$get()
-        m <- mean(data, ...)
-        x$setmean(m)
-        m
-}
-
-#...........................homework
-## Put comments here that give an overall description of what your
-## functions do
-
-## Write a short comment describing this function
+## here I configure x assigning the value of an array
+## to later establish a value assigned as "inver" that is equal to null,
+## This function creates an "array" object, then stores it in its reverse cache
 
 makeCacheMatrix <- function(x = matrix()) {
         inver <- NULL
@@ -46,9 +19,13 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
-## Write a short comment describing this function
+## the following function does the calculation of the inverse of the "matrix" special
+## and caches its inverse
+## when the inverse has been calculated but its matrix does not change, then this function
+## retrieve the inverse of the cache
 
 cacheSolve <- function(x, ...) {
+        
         ## Return a matrix that is the inverse of 'x'
         
         inver <- x$getinverse()
