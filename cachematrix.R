@@ -1,4 +1,4 @@
-##..........................homework
+##...........................homework
 
 ## here I configure x assigning the value of an array
 ## to later establish a value assigned as "inver" that is equal to null,
