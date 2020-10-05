@@ -61,4 +61,3 @@ cacheSolve <- function(x, ...) {
         x$setinverse(inver)
         inver
 }
-##prueba.....3
